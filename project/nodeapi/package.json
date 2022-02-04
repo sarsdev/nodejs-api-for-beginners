@@ -1,0 +1,23 @@
+{
+  "name": "nodeapi",
+  "version": "1.0.0",
+  "description": "NodeJs API for study",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "node",
+    "api",
+    "study"
+  ],
+  "author": "SarsDev",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}

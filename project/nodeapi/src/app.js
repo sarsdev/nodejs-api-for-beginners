@@ -2,6 +2,7 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const bodyparser = require("body-parser");
 const postRoutes = require("./routes/post");
 
 dotenv.config();
@@ -13,6 +14,7 @@ mongoose.connect(uriMongoDb).then(() => console.info("DB Connected"));
 mongoose.connection.on("error", err => console.error(`DB connection error: ${err.message}`));
 
 app.use(morgan("dev"));
+app.use(bodyparser.json());
 app.use("/", postRoutes);
 
 app.listen(port, () => {
